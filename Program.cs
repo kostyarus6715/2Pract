@@ -1,5 +1,5 @@
-﻿
 ﻿using System;
+
 class Program
 {
     static void Main(string[] args)
@@ -10,11 +10,12 @@ class Program
         Console.WriteLine("4. Деление");
         Console.WriteLine("5. Возведение в степень");
         Console.WriteLine("6. Вычисление факториала");
-        Console.WriteLine("7 Выход");
+        Console.WriteLine("7. Вычисление квадратного корня");
+        Console.WriteLine("8. Выход");
 
         while (true)
         {
-            Console.Write("Выберите операцию (1-7): ");
+            Console.Write("Выберите операцию (1-8): ");
             string choice = Console.ReadLine();
 
             switch (choice)
@@ -38,12 +39,14 @@ class Program
                     Factorial();
                     break;
                 case "7":
+                    SquareRoot();
+                    break;
+                case "8":
                     Console.WriteLine("Завершение программы.");
                     return;
                 default:
-                    Console.WriteLine("Некорректный ввод. Пожалуйста, выберите операцию от 1 до 7.");
-                    return;
-
+                    Console.WriteLine("Некорректный ввод. Пожалуйста, выберите операцию от 1 до 8.");
+                    break;
             }
         }
     }
@@ -56,6 +59,7 @@ class Program
         double num2 = Convert.ToDouble(Console.ReadLine());
         Console.WriteLine($"Результат сложения: {num1 + num2}");
     }
+
     static void Subtraction()
     {
         Console.Write("Введите уменьшаемое: ");
@@ -64,6 +68,7 @@ class Program
         double num2 = Convert.ToDouble(Console.ReadLine());
         Console.WriteLine($"Результат вычитания: {num1 - num2}");
     }
+
     static void Multiplication()
     {
         Console.Write("Введите первое число: ");
@@ -72,7 +77,8 @@ class Program
         double num2 = Convert.ToDouble(Console.ReadLine());
         Console.WriteLine($"Результат умножения: {num1 * num2}");
     }
-        static void Division()
+
+    static void Division()
     {
         Console.Write("Введите делимое: ");
         double num1 = Convert.ToDouble(Console.ReadLine());
@@ -84,6 +90,7 @@ class Program
         else
             Console.WriteLine("Деление на ноль невозможно.");
     }
+
     static void Power()
     {
         Console.Write("Введите основание: ");
@@ -92,6 +99,7 @@ class Program
         double num2 = Convert.ToDouble(Console.ReadLine());
         Console.WriteLine($"Результат возведения в степень: {Math.Pow(num1, num2)}");
     }
+
     static void Factorial()
     {
         Console.Write("Введите число для вычисления факториала: ");
@@ -105,8 +113,15 @@ class Program
 
         Console.WriteLine($"Факториал числа {num}: {result}");
     }
-    private string GetDebuggerDisplay()
+
+    static void SquareRoot()
     {
-        return ToString();
+        Console.Write("Введите число для вычисления квадратного корня: ");
+        double num = Convert.ToDouble(Console.ReadLine());
+
+        if (num >= 0)
+            Console.WriteLine($"Квадратный корень из {num}: {Math.Sqrt(num)}");
+        else
+            Console.WriteLine("Нельзя извлечь квадратный корень из отрицательного числа.");
     }
 }
