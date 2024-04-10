@@ -136,10 +136,4 @@ class Program
     int remainder = dividend % divisor;
     Console.WriteLine($"Остаток от деления {dividend} на {divisor} равен: {remainder}");
     }
-    private string GetDebuggerDisplay()
-    }
-}
-        else
-            Console.WriteLine("Нельзя извлечь квадратный корень из отрицательного числа.");
-    }
 }
