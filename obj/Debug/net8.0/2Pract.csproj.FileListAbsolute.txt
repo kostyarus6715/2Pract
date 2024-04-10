@@ -1,0 +1,15 @@
+C:\Users\katsy\2Pract\bin\Debug\net8.0\2Pract.exe
+C:\Users\katsy\2Pract\bin\Debug\net8.0\2Pract.deps.json
+C:\Users\katsy\2Pract\bin\Debug\net8.0\2Pract.runtimeconfig.json
+C:\Users\katsy\2Pract\bin\Debug\net8.0\2Pract.dll
+C:\Users\katsy\2Pract\bin\Debug\net8.0\2Pract.pdb
+C:\Users\katsy\2Pract\obj\Debug\net8.0\2Pract.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\katsy\2Pract\obj\Debug\net8.0\2Pract.AssemblyInfoInputs.cache
+C:\Users\katsy\2Pract\obj\Debug\net8.0\2Pract.AssemblyInfo.cs
+C:\Users\katsy\2Pract\obj\Debug\net8.0\2Pract.csproj.CoreCompileInputs.cache
+C:\Users\katsy\2Pract\obj\Debug\net8.0\2Pract.sourcelink.json
+C:\Users\katsy\2Pract\obj\Debug\net8.0\2Pract.dll
+C:\Users\katsy\2Pract\obj\Debug\net8.0\refint\2Pract.dll
+C:\Users\katsy\2Pract\obj\Debug\net8.0\2Pract.pdb
+C:\Users\katsy\2Pract\obj\Debug\net8.0\2Pract.genruntimeconfig.cache
+C:\Users\katsy\2Pract\obj\Debug\net8.0\ref\2Pract.dll
