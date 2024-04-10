@@ -1,8 +1,5 @@
 ﻿
 ﻿using System;
-using System.Diagnostics;
-
-[DebuggerDisplay($"{{{nameof(GetDebuggerDisplay)}(),nq}}")]
 class Program
 {
     static void Main(string[] args)
@@ -12,20 +9,12 @@ class Program
         Console.WriteLine("3. Умножение");
         Console.WriteLine("4. Деление");
         Console.WriteLine("5. Возведение в степень");
-<<<<<<< HEAD
         Console.WriteLine("6. Вычисление факториала");
         Console.WriteLine("7 Выход");
 
         while (true)
         {
             Console.Write("Выберите операцию (1-7): ");
-=======
-        Console.WriteLine("6 Выход");
-
-        while (true)
-        {
-            Console.Write("Выберите операцию (1-6): ");
->>>>>>> a0805a881ef7d2046d2b9d67201cffaeb79a53b8
             string choice = Console.ReadLine();
 
             switch (choice)
@@ -46,7 +35,6 @@ class Program
                     Power();
                     break;
                 case "6":
-<<<<<<< HEAD
                     Factorial();
                     break;
                 case "7":
@@ -54,13 +42,8 @@ class Program
                     return;
                 default:
                     Console.WriteLine("Некорректный ввод. Пожалуйста, выберите операцию от 1 до 7.");
-=======
-                    Console.WriteLine("Завершение программы.");
                     return;
-                default:
-                    Console.WriteLine("Некорректный ввод. Пожалуйста, выберите операцию от 1 до 6.");
->>>>>>> a0805a881ef7d2046d2b9d67201cffaeb79a53b8
-                    break;
+
             }
         }
     }
@@ -109,7 +92,6 @@ class Program
         double num2 = Convert.ToDouble(Console.ReadLine());
         Console.WriteLine($"Результат возведения в степень: {Math.Pow(num1, num2)}");
     }
-<<<<<<< HEAD
     static void Factorial()
     {
         Console.Write("Введите число для вычисления факториала: ");
@@ -123,8 +105,6 @@ class Program
 
         Console.WriteLine($"Факториал числа {num}: {result}");
     }
-=======
->>>>>>> a0805a881ef7d2046d2b9d67201cffaeb79a53b8
     private string GetDebuggerDisplay()
     {
         return ToString();
