@@ -14,11 +14,12 @@ class Program
         Console.WriteLine("5. Возведение в степень");
         Console.WriteLine("6. Вычисление факториала");
         Console.WriteLine("7. Вычисление квадратного корня");
-        Console.WriteLine("8 Выход");
+        Console.WriteLine("8. Вычисление остатка");
+        Console.WriteLine("9 Выход");
 
         while (true)
         {
-            Console.Write("Выберите операцию (1-7): ");
+            Console.Write("Выберите операцию (1-9): ");
             string choice = Console.ReadLine();
 
             switch (choice)
@@ -45,10 +46,13 @@ class Program
                     SquareRoot();
                     break;
                 case "8":
+                    Remainder();
+                    break;
+                case "9":
                     Console.WriteLine("Завершение программы.");
                     return;
                 default:
-                    Console.WriteLine("Некорректный ввод. Пожалуйста, выберите операцию от 1 до 7.");
+                    Console.WriteLine("Некорректный ввод. Пожалуйста, выберите операцию от 1 до 9.");
                     break;
             }
         }
@@ -120,6 +124,16 @@ class Program
             Console.WriteLine($"Квадратный корень из {num}: {Math.Sqrt(num)}");
         else
             Console.WriteLine("Нельзя извлечь квадратный корень из отрицательного числа.");
+    }
+    static void Remainder()
+    {
+    Console.Write("Введите делимое: ");
+    int dividend = Convert.ToInt32(Console.ReadLine());
+    Console.Write("Введите делитель: ");
+    int divisor = Convert.ToInt32(Console.ReadLine());
+
+    int remainder = dividend % divisor;
+    Console.WriteLine($"Остаток от деления {dividend} на {divisor} равен: {remainder}");
     }
     private string GetDebuggerDisplay()
     {
