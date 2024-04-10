@@ -9,11 +9,12 @@ class Program
         Console.WriteLine("1. Сложение");
         Console.WriteLine("2. Вычитание");
         Console.WriteLine("3. Умножение");
-        Console.WriteLine("4 Выход");
+        Console.WriteLine("4. Деление");
+        Console.WriteLine("5 Выход");
 
         while (true)
         {
-            Console.Write("Выберите операцию (1-3): ");
+            Console.Write("Выберите операцию (1-5): ");
             string choice = Console.ReadLine();
 
             switch (choice)
@@ -28,10 +29,13 @@ class Program
                     Multiplication();
                     break;
                 case "4":
+                    Division();
+                    break;
+                case "5":
                     Console.WriteLine("Завершение программы.");
                     return;
                 default:
-                    Console.WriteLine("Некорректный ввод. Пожалуйста, выберите операцию от 1 до 3.");
+                    Console.WriteLine("Некорректный ввод. Пожалуйста, выберите операцию от 1 до 5.");
                     break;
             }
         }
@@ -60,6 +64,18 @@ class Program
         Console.Write("Введите второе число: ");
         double num2 = Convert.ToDouble(Console.ReadLine());
         Console.WriteLine($"Результат умножения: {num1 * num2}");
+    }
+        static void Division()
+    {
+        Console.Write("Введите делимое: ");
+        double num1 = Convert.ToDouble(Console.ReadLine());
+        Console.Write("Введите делитель: ");
+        double num2 = Convert.ToDouble(Console.ReadLine());
+        
+        if (num2 != 0)
+            Console.WriteLine($"Результат деления: {num1 / num2}");
+        else
+            Console.WriteLine("Деление на ноль невозможно.");
     }
     private string GetDebuggerDisplay()
     {
