@@ -1,18 +1,14 @@
 ﻿using System;
-using System.Diagnostics;
-
-[DebuggerDisplay($"{{{nameof(GetDebuggerDisplay)}(),nq}}")]
 class Program
 {
     static void Main(string[] args)
     {
         Console.WriteLine("1. Сложение");
-        Console.WriteLine("2. Вычитание");
-        Console.WriteLine("3 Выход");
+        Console.WriteLine("2 Выход");
 
         while (true)
         {
-            Console.Write("Выберите операцию (1-3): ");
+            Console.Write("Выберите операцию (1-2): ");
             string choice = Console.ReadLine();
 
             switch (choice)
@@ -21,13 +17,10 @@ class Program
                     Addition();
                     break;
                 case "2":
-                    Subtraction();
-                    break;
-                case "3":
                     Console.WriteLine("Завершение программы.");
                     return;
                 default:
-                    Console.WriteLine("Некорректный ввод. Пожалуйста, выберите операцию от 1 до 3.");
+                    Console.WriteLine("Некорректный ввод. Пожалуйста, выберите операцию от 1 до 2.");
                     break;
             }
         }
@@ -40,17 +33,5 @@ class Program
         Console.Write("Введите второе число: ");
         double num2 = Convert.ToDouble(Console.ReadLine());
         Console.WriteLine($"Результат сложения: {num1 + num2}");
-    }
-    static void Subtraction()
-    {
-        Console.Write("Введите уменьшаемое: ");
-        double num1 = Convert.ToDouble(Console.ReadLine());
-        Console.Write("Введите вычитаемое: ");
-        double num2 = Convert.ToDouble(Console.ReadLine());
-        Console.WriteLine($"Результат вычитания: {num1 - num2}");
-    }
-    private string GetDebuggerDisplay()
-    {
-        return ToString();
     }
 }
