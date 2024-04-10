@@ -1,7 +1,5 @@
+﻿
 ﻿using System;
-using System.Diagnostics;
-
-[DebuggerDisplay($"{{{nameof(GetDebuggerDisplay)}(),nq}}")]
 class Program
 {
     static void Main(string[] args)
@@ -10,11 +8,13 @@ class Program
         Console.WriteLine("2. Вычитание");
         Console.WriteLine("3. Умножение");
         Console.WriteLine("4. Деление");
-        Console.WriteLine("5 Выход");
+        Console.WriteLine("5. Возведение в степень");
+        Console.WriteLine("6. Вычисление факториала");
+        Console.WriteLine("7 Выход");
 
         while (true)
         {
-            Console.Write("Выберите операцию (1-5): ");
+            Console.Write("Выберите операцию (1-7): ");
             string choice = Console.ReadLine();
 
             switch (choice)
@@ -32,11 +32,18 @@ class Program
                     Division();
                     break;
                 case "5":
+                    Power();
+                    break;
+                case "6":
+                    Factorial();
+                    break;
+                case "7":
                     Console.WriteLine("Завершение программы.");
                     return;
                 default:
-                    Console.WriteLine("Некорректный ввод. Пожалуйста, выберите операцию от 1 до 5.");
-                    break;
+                    Console.WriteLine("Некорректный ввод. Пожалуйста, выберите операцию от 1 до 7.");
+                    return;
+
             }
         }
     }
@@ -76,6 +83,27 @@ class Program
             Console.WriteLine($"Результат деления: {num1 / num2}");
         else
             Console.WriteLine("Деление на ноль невозможно.");
+    }
+    static void Power()
+    {
+        Console.Write("Введите основание: ");
+        double num1 = Convert.ToDouble(Console.ReadLine());
+        Console.Write("Введите степень: ");
+        double num2 = Convert.ToDouble(Console.ReadLine());
+        Console.WriteLine($"Результат возведения в степень: {Math.Pow(num1, num2)}");
+    }
+    static void Factorial()
+    {
+        Console.Write("Введите число для вычисления факториала: ");
+        int num = Convert.ToInt32(Console.ReadLine());
+        int result = 1;
+        
+        for (int i = 1; i <= num; i++)
+        {
+            result *= i;
+        }
+
+        Console.WriteLine($"Факториал числа {num}: {result}");
     }
     private string GetDebuggerDisplay()
     {
