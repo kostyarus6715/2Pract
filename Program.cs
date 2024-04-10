@@ -8,7 +8,8 @@ class Program
     {
         Console.WriteLine("1. Сложение");
         Console.WriteLine("2. Вычитание");
-        Console.WriteLine("3 Выход");
+        Console.WriteLine("3. Умножение");
+        Console.WriteLine("4 Выход");
 
         while (true)
         {
@@ -24,6 +25,9 @@ class Program
                     Subtraction();
                     break;
                 case "3":
+                    Multiplication();
+                    break;
+                case "4":
                     Console.WriteLine("Завершение программы.");
                     return;
                 default:
@@ -48,6 +52,14 @@ class Program
         Console.Write("Введите вычитаемое: ");
         double num2 = Convert.ToDouble(Console.ReadLine());
         Console.WriteLine($"Результат вычитания: {num1 - num2}");
+    }
+    static void Multiplication()
+    {
+        Console.Write("Введите первое число: ");
+        double num1 = Convert.ToDouble(Console.ReadLine());
+        Console.Write("Введите второе число: ");
+        double num2 = Convert.ToDouble(Console.ReadLine());
+        Console.WriteLine($"Результат умножения: {num1 * num2}");
     }
     private string GetDebuggerDisplay()
     {
